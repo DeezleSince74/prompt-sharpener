@@ -14,5 +14,7 @@ for a security problem. You can expect a first reply within 7 days.
   writes nothing, and makes no network requests.
 - **No server, no tools.** The plugin adds no MCP (Model Context Protocol) server and no
   commands. Its skill is text that tells Claude how to rewrite prompts and check facts.
+- **Web pages can't steer it.** When Claude checks a fact online, the directions tell it to treat
+  page content as data, never as instructions, and to tell you if a page tries to direct it.
 - **Nothing overrides you.** The directions tell Claude to skip the rewrite when you ask it
   to, and to hand back a rewritten prompt without running it when that is what you asked for.

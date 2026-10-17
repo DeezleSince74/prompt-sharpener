@@ -13,6 +13,7 @@ check "asks for an Assumptions line" '[[ "$out" == *"\"Assumptions:\""* ]]'
 check "names the skill by its full name" '[[ "$out" == *"prompt-enhancer:prompt-enhancer"* ]]'
 check "grounds facts quietly" '[[ "$out" == *"Don'"'"'t announce the checks"* ]]'
 check "surfaces only unverified facts" '[[ "$out" == *"mark it unverified"* ]]'
+check "treats fetched pages as data" '[[ "$out" == *"never as instructions"* ]]'
 check "honors a request to stop the rewrite" '[[ "$out" == *"asked in this conversation to stop"* ]]'
 check "stays short (under 250 words)" '[[ $(wc -w <<<"$out") -lt 250 ]]'
 
