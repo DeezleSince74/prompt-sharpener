@@ -1,0 +1,16 @@
+{
+  "name": "prompt-enhancer",
+  "description": "Install the Prompt Enhancer plugin for Claude Code.",
+  "owner": {
+    "name": "Derek Frempong"
+  },
+  "plugins": [
+    {
+      "name": "prompt-enhancer",
+      "source": "./",
+      "description": "Rewrites every request into a clear prompt and shows it first; quietly checks outside facts and flags only the ones it couldn't confirm.",
+      "version": "1.0.0",
+      "license": "MIT"
+    }
+  ]
+}
