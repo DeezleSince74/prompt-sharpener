@@ -20,6 +20,9 @@ Prompt Sharpener is a Claude Code plugin. On every message you send, it does two
 | [Control and privacy](control-and-privacy.md) | Turn the rewrite off, disable the plugin, and see what it reads and sends. |
 | [Troubleshooting and FAQ](troubleshooting.md) | Fix common problems and get quick answers. |
 
+A printable [user manual](https://madewithdeezle.com/downloads/prompt-sharpener-manual.pdf)
+(a 14-page PDF with the same content and pictures) is on madewithdeezle.com.
+
 ## About the pictures
 
 Every caption says what its picture is. **Real** means it was captured from the plugin
