@@ -15,6 +15,9 @@ A Claude Code plugin that does two things on every message you send.
    couldn't be confirmed: Claude marks it "unverified" where it's used and tells you
    how to check it yourself.
 
+Full guides with pictures are in [docs/](docs/README.md): getting started, the three ways
+to use it, how it works, control and privacy, and troubleshooting.
+
 ## Example
 
 You type:
