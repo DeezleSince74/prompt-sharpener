@@ -10,6 +10,9 @@ Prompt Sharpener is a Claude Code plugin. On every message you send, it does two
 ![An example reply: the request, the rewritten prompt, the Assumptions line, then the work](images/reply.png)
 *Example reply, re-drawn to show the format. The model writes different words each time.*
 
+![The Claude desktop app: a one-line request, then Claude's rewritten prompt and an Assumptions line](images/desktop.png)
+*Real screenshot from the Claude desktop app's Code tab, October 17, 2026.*
+
 ## Guides
 
 | Guide | Read it to |
@@ -21,7 +24,7 @@ Prompt Sharpener is a Claude Code plugin. On every message you send, it does two
 | [Troubleshooting and FAQ](troubleshooting.md) | Fix common problems and get quick answers. |
 
 A printable [user manual](https://madewithdeezle.com/downloads/prompt-sharpener-manual.pdf)
-(a 14-page PDF with the same content and pictures) is on madewithdeezle.com.
+(a 15-page PDF with the same content and pictures) is on madewithdeezle.com.
 
 ## About the pictures
 

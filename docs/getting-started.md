@@ -58,6 +58,11 @@ The reply comes in three parts:
 ![An example reply showing the rewritten prompt, the Assumptions line and the start of the post](images/reply.png)
 *Example reply, re-drawn to show the format.*
 
+Here is the same thing for real, in the Claude desktop app's Code tab:
+
+![The Claude desktop app: a one-line request, then Claude's rewritten prompt in a code box and an Assumptions line](images/desktop.png)
+*Real screenshot from the Claude desktop app, October 17, 2026, trimmed to the conversation.*
+
 **When a guess is wrong,** say so in your next message, for example "make it for
 families with kids". Claude redoes the work with the fix.
 
