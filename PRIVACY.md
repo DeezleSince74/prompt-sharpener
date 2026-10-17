@@ -1,6 +1,6 @@
 # Privacy
 
-Prompt Enhancer does not collect, store or send any personal data.
+Prompt Sharpener does not collect, store or send any personal data.
 
 - The hook prints the same fixed text on every message. It does not read your message,
   your files, or anything else on your computer, and it makes no network requests.

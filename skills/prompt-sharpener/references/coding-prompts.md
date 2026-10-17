@@ -6,7 +6,7 @@ organized by the job at hand; further learning at the end.
 
 Coding prompts fail in a specific way: the person knows the language, the
 codebase, the bug, and the expected behavior — and types almost none of it.
-The model then guesses, and the guess is generic. Enhancing a coding prompt
+The model then guesses, and the guess is generic. Sharpening a coding prompt
 is mostly about surfacing that hidden context.
 
 ## First, identify the coding sub-intent
@@ -20,7 +20,7 @@ is mostly about surfacing that hidden context.
 | Review / refactor | Existing code improved against a goal. |
 | Blueprint / scaffold | A new feature planned and stubbed out. |
 
-## What every enhanced coding prompt includes
+## What every sharpened coding prompt includes
 
 - **Language and version** — plus framework/runtime when relevant
   (Python 3.12, React 18, Node 20).
@@ -94,7 +94,7 @@ is mostly about surfacing that hidden context.
 
 **Raw prompt:** `fix my python code its not working`
 
-**Enhanced prompt:**
+**Sharpened prompt:**
 
 ```
 You are a senior Python developer.

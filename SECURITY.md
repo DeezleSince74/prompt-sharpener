@@ -9,9 +9,8 @@ for a security problem. You can expect a first reply within 7 days.
 
 ## What the plugin can do on your computer
 
-- **One hook, fixed text.** On each message, `hooks/scripts/prompt-enhancer.sh` prints two
-  short directions. It reads no input, files or environment besides `PROMPT_ENHANCER_OFF`,
-  writes nothing, and makes no network requests.
+- **One hook, fixed text.** On each message, `hooks/scripts/prompt-sharpener.sh` prints two
+  short directions. It reads no input, files or environment, writes nothing, and makes no network requests.
 - **No server, no tools.** The plugin adds no MCP (Model Context Protocol) server and no
   commands. Its skill is text that tells Claude how to rewrite prompts and check facts.
 - **Web pages can't steer it.** When Claude checks a fact online, the directions tell it to treat

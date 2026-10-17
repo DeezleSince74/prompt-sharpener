@@ -57,7 +57,7 @@ Add an example whenever the output needs a shape prose won't reliably convey
 
 ## 3. System, role, and contextual prompting
 
-Three overlapping layers; a strong enhanced prompt often uses all three, in
+Three overlapping layers; a strong sharpened prompt often uses all three, in
 this order: role near the top, context after it, the instruction, then
 output rules at the end.
 
@@ -118,7 +118,7 @@ the loop explicitly (the reason-then-act pattern studied by Yao et al.):
   most N attempts, report what was tried") so the loop can't run on
   pointlessly. Cap output where the API allows.
 
-When enhancing an agentic prompt, the stopping condition is the piece most
+When sharpening an agentic prompt, the stopping condition is the piece most
 often missing — add it even when everything else is implicit.
 
 ## 6. Structured output and schemas
@@ -160,7 +160,7 @@ Apply to every rewrite:
 
 ## 8. Prompts that will be reused: variants, versioning, retesting
 
-Most enhancements are one-offs; some become templates or production
+Most sharpened prompts are one-offs; some become templates or production
 prompts. For those, add engineering discipline:
 
 - **Test variants.** Write 2–3 phrasings of the key instruction, run each

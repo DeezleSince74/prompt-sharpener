@@ -1,4 +1,4 @@
-# Prompt Enhancer
+# Prompt Sharpener
 
 A Claude Code plugin that does two things on every message you send.
 
@@ -53,19 +53,18 @@ Then the finished post follows.
   link, and the date checked.
 - **Turn the rewrite off for one conversation:** ask Claude to stop showing the
   rewrite. Fact-checking keeps running.
-- **Turn the plugin's directions off everywhere:** set the environment variable
-  `PROMPT_ENHANCER_OFF=1` before starting Claude Code. The skill stays available
-  when you ask for it by name.
+- **Turn it off everywhere:** disable Prompt Sharpener with `/plugin`. Turn it back on
+  the same way.
 
 ## Installing
 
-From the Claude plugin Directory, once it is listed, install **Prompt Enhancer**.
+From the Claude plugin Directory, once it is listed, install **Prompt Sharpener**.
 
 Or add this repository as a marketplace in Claude Code:
 
 ```
-/plugin marketplace add DeezleSince74/prompt-enhancer
-/plugin install prompt-enhancer@prompt-enhancer
+/plugin marketplace add DeezleSince74/prompt-sharpener
+/plugin install prompt-sharpener@prompt-sharpener
 ```
 
 Start a new session after installing, since a running session keeps the plugins it
@@ -76,9 +75,9 @@ started with.
 | Part | What it does |
 | --- | --- |
 | `hooks/hooks.json` | Runs one script each time you submit a message (a `UserPromptSubmit` hook). |
-| `hooks/scripts/prompt-enhancer.sh` | Prints the two short directions above. It reads no input, files or network. |
-| `skills/prompt-enhancer/SKILL.md` | The full method: how to find what you really want, when to ask instead of guess, rewrite techniques, and how to ground facts quietly. |
-| `skills/prompt-enhancer/references/` | Longer guides: general prompting techniques, coding prompts, and the grounding checklist with the verify-mode report. |
+| `hooks/scripts/prompt-sharpener.sh` | Prints the two short directions above. It reads no input, files or network. |
+| `skills/prompt-sharpener/SKILL.md` | The full method: how to find what you really want, when to ask instead of guess, rewrite techniques, and how to ground facts quietly. |
+| `skills/prompt-sharpener/references/` | Longer guides: general prompting techniques, coding prompts, and the grounding checklist with the verify-mode report. |
 | `tests/test-hook.sh` | Checks the hook's output, with no model calls. |
 
 The hook is a short `bash` script. On Windows, Claude Code runs hooks through Git Bash, so

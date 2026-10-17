@@ -1,9 +1,9 @@
 ---
-name: prompt-enhancer
-description: "Rewrites a short, vague, or underspecified prompt into a clear, well-structured one, and quietly checks outside facts (versions, prices, commands, limits, API shapes, rules) against current sources before stating them. Use when someone asks to improve, enhance, rewrite, or fix a prompt; hands over a one-line request too thin to produce a good result; asks to verify a claim (\"verify this\", \"is this current\", \"check the docs\"); or when a standing rule calls for inline mode: rewrite the prompt, show it briefly, then execute it."
+name: prompt-sharpener
+description: "Rewrites a short, vague, or underspecified prompt into a clear, well-structured one, and quietly checks outside facts (versions, prices, commands, limits, API shapes, rules) against current sources before stating them. Use when someone asks to improve, sharpen, enhance, rewrite, or fix a prompt; hands over a one-line request too thin to produce a good result; asks to verify a claim (\"verify this\", \"is this current\", \"check the docs\"); or when a standing rule calls for inline mode: rewrite the prompt, show it briefly, then execute it."
 ---
 
-# Prompt Enhancer
+# Prompt Sharpener
 
 ## What this skill does
 
@@ -13,7 +13,7 @@ This skill closes that gap. It takes a thin prompt, works out what the person
 is actually trying to achieve, and rewrites it so the model has everything it
 needs to deliver that on the first try.
 
-The deliverable is always two things: the **enhanced prompt** and a short
+The deliverable is always two things: the **sharpened prompt** and a short
 **rationale** explaining what changed and why. The rationale matters — it
 teaches the person to prompt better next time, so they need this skill less.
 
@@ -27,7 +27,7 @@ fact could not be confirmed. See **Behind-the-scenes grounding** below.
 ## Three modes
 
 **Standalone mode (the default).** The person asked for a better prompt. Hand
-back the enhanced prompt and rationale and stop — do not perform the task the
+back the sharpened prompt and rationale and stop — do not perform the task the
 prompt describes. Steps 1–5 below describe this mode.
 
 **Inline mode.** A standing instruction says to apply this skill to every
@@ -95,7 +95,7 @@ the reader feel or do?).
 This is the judgment call. You have two options, and picking well is the heart
 of the skill.
 
-**Enhance directly (the default).** If you can make sensible, low-risk
+**Sharpen directly (the default).** If you can make sensible, low-risk
 assumptions to fill the gaps, do it. Don't interrogate the person over things a
 reasonable default covers. When you assume, *say so* in the rationale so they
 can correct you. Most prompts should go straight to step 4.
@@ -184,17 +184,17 @@ Match technique to intent rather than throwing everything at every prompt:
 
 Use placeholder **variables** in `{curly braces}` for any part the person will
 swap out across uses (e.g. `{city}`, `{customer_name}`) — this makes the
-enhanced prompt reusable, not a one-off.
+sharpened prompt reusable, not a one-off.
 
-Preserve the person's actual goal and any specifics they gave. Enhancing means
+Preserve the person's actual goal and any specifics they gave. Sharpening means
 clarifying and completing, not replacing their intent with yours.
 
-### Step 5 — Deliver the enhanced prompt and rationale
+### Step 5 — Deliver the sharpened prompt and rationale
 
 Present the result in this structure every time:
 
 ```
-## Enhanced prompt
+## Sharpened prompt
 
 [The rewritten prompt, in a code block so it is easy to copy.]
 
@@ -210,7 +210,7 @@ tied to a reason. The person should finish reading it slightly better at
 prompting than when they started.
 
 If you asked clarifying questions in step 3, fold their answers into the
-enhanced prompt and note in the rationale how those answers shaped it.
+sharpened prompt and note in the rationale how those answers shaped it.
 
 ## Inline mode
 
@@ -218,11 +218,11 @@ Use this delivery instead of step 5 when a standing instruction applies the
 skill to every prompt. The rewrite is a preprocessing step; the person still
 expects the work done in this turn.
 
-1. Run steps 1–4 exactly as above. Lean harder toward "enhance directly":
+1. Run steps 1–4 exactly as above. Lean harder toward "sharpen directly":
    in inline mode a clarifying question costs the person a whole round-trip on
    a request they expected to just get done, so ask only when the gap would
    send the work somewhere materially different.
-2. Show the enhanced prompt **briefly** — a short code block, then one line
+2. Show the sharpened prompt **briefly** — a short code block, then one line
    beginning `Assumptions:` listing what you guessed. Skip the full "What
    changed and why" rationale; the person did not ask for a prompting lesson.
    Keep the whole block to a handful of lines. For a trivial request, a single
@@ -237,7 +237,7 @@ expects the work done in this turn.
    tool call is genuinely needed to understand the request at all, say so in
    the `Assumptions:` line and rewrite again afterwards only if the answer
    changed the task.
-3. Then carry out the **enhanced** prompt, not the original wording, in the
+3. Then carry out the **sharpened** prompt, not the original wording, in the
    same response. Use `{curly-brace}` variables only if the person will reuse
    the prompt; for a one-off request, resolve them.
 4. While doing the work, ground every outside fact the answer depends on, as
@@ -303,9 +303,9 @@ The full checklist and the visible report format for verify mode are in
 
 **Intent:** Generate / create. **Objective:** unclear — audience, angle,
 length, and purpose are all missing, but none of these gaps is unrecoverable
-with reasonable defaults, so enhance directly and flag the assumptions.
+with reasonable defaults, so sharpen directly and flag the assumptions.
 
-**Enhanced prompt:**
+**Sharpened prompt:**
 
 ```
 You are an experienced pet-care writer.
@@ -338,7 +338,7 @@ Requirements:
   practical how-to angle. If you had a different reader or angle in mind (e.g.
   dog health, training, a specific breed), tell me and I'll re-tune it.
 
-**The same prompt in inline mode** would show the enhanced prompt block, one
+**The same prompt in inline mode** would show the sharpened prompt block, one
 line of assumptions (`Assumptions: first-time owners as the audience, a
 practical how-to angle, ~800 words`), and then the finished blog post.
 
