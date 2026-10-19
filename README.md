@@ -61,7 +61,7 @@ Then the finished post follows.
 
 ## Installing
 
-From the Claude plugin Directory, once it is listed, install **Prompt Sharpener**.
+From the Claude plugin Directory: Prompt Sharpener is listed for Claude Code, Cowork and the Claude apps. Open the plugin browser, search for **Prompt Sharpener**, and install it.
 
 Or add this repository as a marketplace in Claude Code:
 

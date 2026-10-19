@@ -11,9 +11,9 @@
 
 ## Install it
 
-**From the plugin Directory.** Once Prompt Sharpener is listed in Anthropic's plugin
-Directory, open the plugin browser in Claude Code, find **Prompt Sharpener**, and
-install it.
+**From the plugin Directory.** Prompt Sharpener is listed in Anthropic's plugin
+Directory for Claude Code, Cowork and the Claude apps. Open the plugin browser, search
+for **Prompt Sharpener**, and install it.
 
 **From GitHub.** In a Claude Code session, type:
 
