@@ -7,7 +7,8 @@
 - Start a new session. Running sessions keep the plugins they started with.
 - Run `/plugin` and check that Prompt Sharpener is enabled.
 - Check that you didn't ask Claude to stop the rewrite earlier in this conversation.
-- On Windows, install Git for Windows so Claude Code can run the hook.
+- Make sure you're on version 1.0.1 or later (`claude plugin list` shows it). Version 1.0.0
+  needed Git for Windows to run the hook on Windows.
 
 ### I asked for a better prompt, and Claude ran it instead
 

@@ -77,15 +77,15 @@ started with.
 
 | Part | What it does |
 | --- | --- |
-| `hooks/hooks.json` | Runs one script each time you submit a message (a `UserPromptSubmit` hook). |
-| `hooks/scripts/prompt-sharpener.sh` | Prints the two short directions above. It reads no input, files or network. |
+| `hooks/hooks.json` | Each time you submit a message (a `UserPromptSubmit` hook), prints `hooks/rules.txt` with `cat`. |
+| `hooks/rules.txt` | The two short directions above, as plain text. Nothing reads your input, files or network. |
 | `skills/prompt-sharpener/SKILL.md` | The full method: how to find what you really want, when to ask instead of guess, rewrite techniques, and how to ground facts quietly. |
 | `skills/prompt-sharpener/references/` | Longer guides: general prompting techniques, coding prompts, and the grounding checklist with the verify-mode report. |
 | `tests/test-hook.sh` | Checks the hook's output, with no model calls. |
 
-The hook is a short `bash` script. On Windows, Claude Code runs hooks through Git Bash, so
-the hook needs Git for Windows installed. Without it, the skill still works when you ask
-for it, but the automatic rewrite on every message won't run.
+The hook works on macOS, Linux and Windows with nothing extra to install. Its one command,
+`cat`, reads the rules file in Bash and in Windows PowerShell alike, so Windows users
+don't need Git for Windows.
 
 Fact-checking uses whatever search or fetch tools your session has. With none, Claude
 still answers but marks the facts it couldn't check as unverified.

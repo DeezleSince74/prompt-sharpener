@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.1 — 2026-10-21
+
+- The hook now works on Windows without Git for Windows. Its directions moved into a plain
+  text file, `hooks/rules.txt`, and the hook prints it with `cat`, which runs in Bash and in
+  Windows PowerShell alike. The words are unchanged.
+
 ## 1.0.0 — 2026-10-17
 
 - First release. Merges two skills that were used together: a prompt sharpener (rewrite

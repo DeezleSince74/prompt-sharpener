@@ -1,7 +1,7 @@
 {
   "name": "prompt-sharpener",
   "displayName": "Prompt Sharpener",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Rewrites every request into a clear, complete prompt and shows it before Claude starts work, with the guesses it made listed underneath. Behind the scenes, it checks outside facts like versions, prices, commands and limits against current sources, and flags only the ones it couldn't confirm.",
   "author": {
     "name": "Derek Frempong"

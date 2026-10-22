@@ -5,7 +5,7 @@
 | Item | Details |
 | --- | --- |
 | Claude Code | In the terminal, the desktop app's Code tab, or an editor extension. |
-| Bash | Built into macOS and Linux. On Windows, install Git for Windows, since Claude Code runs hooks through Git Bash there. |
+| Your computer | macOS, Linux or Windows. Nothing else to install: on Windows the hook runs with or without Git for Windows. |
 | Search tools | Optional. Fact-checking uses whatever web search or fetch tools your session already has. |
 | An account | None. The plugin has no server and needs no sign-in. |
 

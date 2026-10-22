@@ -14,7 +14,7 @@ organization tell Claude.
 
 ## What it reads and writes
 
-The plugin's script prints the same fixed text every time. It doesn't read your message,
+The plugin's hook prints the same fixed text every time. It doesn't read your message,
 your files, or anything else, and it writes nothing.
 
 Fact-checks use your session's own search and fetch tools, under the same permissions
@@ -28,8 +28,8 @@ The plugin collects nothing and sends nothing anywhere. There's no server, no te
 
 ## Security
 
-The hook prints fixed text and runs nothing else, and its test checks that before it
-ever runs the script (see [How it works](how-it-works.md#the-test)). To report a
+The hook's only command prints a plain text file and runs nothing else, and its test
+checks that (see [How it works](how-it-works.md#the-test)). To report a
 security problem privately, use this repository's **Security** tab on GitHub.
 [SECURITY.md](../SECURITY.md) has the details.
 
