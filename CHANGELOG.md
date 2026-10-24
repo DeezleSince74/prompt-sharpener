@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.0.2 — unreleased
+## 1.0.2 — 2026-10-24
 
 - Works better in Claude chat, which doesn't run plugin hooks. The skill now loads for any
   short or vague request, not just when you ask for a better prompt. When it loads that
