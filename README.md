@@ -1,6 +1,8 @@
 # Prompt Sharpener
 
-A Claude Code plugin that does two things on every message you send.
+A plugin for Claude Code, Cowork and Claude chat that does two things to your requests.
+In Claude Code and Cowork it runs on every message you send. In Claude chat it runs
+when your request looks short or vague, or when you ask it to (see [Where it runs](#where-it-runs)).
 
 1. **It rewrites your request into a clear prompt, and shows you that first.** Before
    Claude starts any work, the reply opens with your request rewritten as a complete
@@ -58,6 +60,17 @@ Then the finished post follows.
   rewrite. Fact-checking keeps running.
 - **Turn it off everywhere:** disable Prompt Sharpener with `/plugin`. Turn it back on
   the same way.
+
+## Where it runs
+
+| App | When it rewrites |
+| --- | --- |
+| Claude Code (terminal, IDE, desktop Code tab) | Every message |
+| Cowork | Every message |
+| Claude chat (web, desktop, mobile) | When a request looks short or vague, or when you ask: "sharpen this first" |
+
+Claude chat doesn't run plugin hooks, and the hook is what makes it run on every message.
+In chat, Claude uses the skill when it thinks it fits.
 
 ## Installing
 

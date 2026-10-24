@@ -1,6 +1,6 @@
 ---
 name: prompt-sharpener
-description: "Rewrites a short, vague, or underspecified prompt into a clear, well-structured one, and quietly checks outside facts (versions, prices, commands, limits, API shapes, rules) against current sources before stating them. Use when someone asks to improve, sharpen, enhance, rewrite, or fix a prompt; hands over a one-line request too thin to produce a good result; asks to verify a claim (\"verify this\", \"is this current\", \"check the docs\"); or when a standing rule calls for inline mode: rewrite the prompt, show it briefly, then execute it."
+description: "Rewrites a request into a clear, complete prompt, shows it first with one line of assumptions, then does the work; quietly checks outside facts (versions, prices, commands, limits, API shapes, rules) against current sources before stating them. Use on any request that is short, vague, or missing details such as audience, format, length or scope, even when the person does not ask for a better prompt. Also use when someone asks to improve, sharpen, enhance, rewrite, or fix a prompt; asks to verify a claim (\"verify this\", \"is this current\", \"check the docs\"); or when a standing rule calls for inline mode."
 ---
 
 # Prompt Sharpener
@@ -26,7 +26,7 @@ fact could not be confirmed. See **Behind-the-scenes grounding** below.
 
 ## Three modes
 
-**Standalone mode (the default).** The person asked for a better prompt. Hand
+**Standalone mode.** The person asked for a better prompt. Hand
 back the sharpened prompt and rationale and stop — do not perform the task the
 prompt describes. Steps 1–5 below describe this mode.
 
@@ -46,6 +46,12 @@ one, if an inline rule is active.
 If the person explicitly asks for the prompt itself ("improve this prompt",
 "just rewrite it", "give me a better prompt for…"), use standalone mode even
 when an inline rule is active.
+
+If this skill loaded on its own for an ordinary request, with no standing rule
+and no ask for the prompt itself, use inline mode: show the rewrite, then do
+the work. This is the usual case in Claude chat, where plugin hooks don't run,
+so the skill stands in for the hook. A one-line ask with a clear answer needs
+only the one-line "Taking this as: ..." form.
 
 ## The workflow
 

@@ -4,10 +4,13 @@
 
 ### I installed it, but replies don't start with a rewrite
 
+- In Claude chat (web, desktop or mobile), this is expected. Chat doesn't run plugin
+  hooks, so it rewrites only when a request looks vague or you ask. Start with
+  "Sharpen this first:" to be sure. Claude Code and Cowork run it on every message.
 - Start a new session. Running sessions keep the plugins they started with.
 - Run `/plugin` and check that Prompt Sharpener is enabled.
 - Check that you didn't ask Claude to stop the rewrite earlier in this conversation.
-- Make sure you're on version 1.0.1 or later (`claude plugin list` shows it). Version 1.0.0
+- Make sure you're on version 1.0.2 or later (`claude plugin list` shows it). Version 1.0.0
   needed Git for Windows to run the hook on Windows.
 
 ### I asked for a better prompt, and Claude ran it instead

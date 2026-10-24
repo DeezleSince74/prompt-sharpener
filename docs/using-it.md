@@ -1,7 +1,7 @@
 # Using it
 
-Most of the time you won't think about it, because it runs on every message. Two more
-ways to use it are one phrase away.
+In Claude Code and Cowork you won't think about it, because it runs on every message. Two
+more ways to use it are one phrase away.
 
 | Way | How to start it | What you get |
 | --- | --- | --- |
@@ -10,6 +10,18 @@ ways to use it are one phrase away.
 | Verify a claim | "Verify this: …" or "Is this still current?" | A short report for each claim, with the source and the date it was checked. |
 
 ## Every message
+
+### Where it runs
+
+| App | When it rewrites |
+| --- | --- |
+| Claude Code (terminal, IDE, desktop Code tab) | Every message |
+| Cowork | Every message |
+| Claude chat (web, desktop, mobile) | When a request looks short or vague, or when you ask |
+
+Claude chat doesn't run plugin hooks, and the hook is what makes it run on every message.
+In chat, Claude uses the skill when it thinks it fits. To be sure, start with "Sharpen this
+first:".
 
 See [Getting started](getting-started.md#your-first-message) for what a normal reply
 looks like.
