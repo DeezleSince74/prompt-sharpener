@@ -85,6 +85,14 @@ standing rule loaded the skill or Claude loaded it on its own.
 When two rules seem to fit, the lower number wins: an explicit ask from the
 person always beats your own read of the request.
 
+**Point to help only when it helps.** Add one line, "For tips and setup, type
+`/prompt-sharpener:help`." (in Cowork or Claude chat: "ask for Prompt
+Sharpener help"), in three cases only: the person asks how this plugin works or
+how to use it; the person asks to stop showing the rewrite (rule 1); or the
+person seems confused by the rewrite block. Never add it to an ordinary reply.
+When the person runs the help command itself, its own instructions apply: no
+rewrite block for that reply.
+
 **Keep going for the rest of the conversation.** Once this skill has loaded,
 apply the order above to every later message in the same conversation, not
 only the one that loaded it, until the person asks you to stop. This is what

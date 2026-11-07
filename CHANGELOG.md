@@ -12,6 +12,10 @@
 - To have it run on every message, add one line to your standing instructions
   (`CLAUDE.md`, Cowork's global instructions, or your chat preferences). The README and
   guides show the line and where it goes.
+- New help command: `/prompt-sharpener:help` (or "Prompt Sharpener help" in Cowork and
+  Claude chat) gives tips, the every-message setup, a quick setup check and best
+  practices. It runs only when you ask. The main skill mentions it only when you ask how
+  the plugin works, ask to stop the rewrite, or seem confused by it.
 
 ## 1.0.2 — 2026-10-24
 

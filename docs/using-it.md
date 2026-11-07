@@ -37,6 +37,20 @@ showing the rewrite.
 See [Getting started](getting-started.md#your-first-message) for what a normal reply
 looks like.
 
+## Get help
+
+Type `/prompt-sharpener:help` in Claude Code. In Cowork or Claude chat, ask for "Prompt
+Sharpener help". You get a short guide to the three ways to use it, the every-message
+line, a quick check of your setup, and best practices. Add a question after it, like
+`/prompt-sharpener:help how do I turn it off?`, to get just that answer.
+
+The setup check looks only at what your session lets Claude see, and says which checks
+it ran. It never changes a file; if something needs fixing, it shows the fix and asks.
+
+Claude also mentions the help command when you ask how the plugin works, when you ask it
+to stop showing the rewrite, or when the rewrite seems to confuse you. It doesn't add the
+tip to ordinary replies.
+
 ## Improve a prompt without running it
 
 Use this when you're writing a prompt to reuse, share, or put in a tool. Parts you'll

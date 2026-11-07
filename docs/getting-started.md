@@ -69,4 +69,6 @@ families with kids". Claude redoes the work with the fix.
 **For very short requests,** like "what time is it in Tokyo", the rewrite shrinks to one
 line that starts with "Taking this as:".
 
+**For tips and a setup check,** type `/prompt-sharpener:help`.
+
 Next: [Using it](using-it.md)

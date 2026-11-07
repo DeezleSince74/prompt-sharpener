@@ -2,6 +2,9 @@
 
 ## Troubleshooting
 
+Start with `/prompt-sharpener:help` (or ask for "Prompt Sharpener help" in Cowork or
+Claude chat). Its setup check covers the most common causes below.
+
 ### I installed it, but replies don't start with a rewrite
 
 - On a message that already looks complete, Claude may skip it. Start with "Sharpen

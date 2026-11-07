@@ -58,6 +58,9 @@ Then the finished post follows.
   link, and the date checked.
 - **Turn the rewrite off for one conversation:** ask Claude to stop showing the
   rewrite. Fact-checking keeps running.
+- **Get help:** type `/prompt-sharpener:help` in Claude Code, or ask for "Prompt
+  Sharpener help" in Cowork or Claude chat. You get tips, the every-message setup, a
+  quick check of your setup, and best practices.
 - **Turn it off everywhere:** disable Prompt Sharpener with `/plugin`. Turn it back on
   the same way.
 
@@ -100,6 +103,7 @@ started with.
 | --- | --- |
 | `skills/prompt-sharpener/SKILL.md` | The full method: when to rewrite (an ordered list of cases), how to find what you really want, when to ask instead of guess, rewrite techniques, and how to ground facts quietly. |
 | `skills/prompt-sharpener/references/` | Longer guides: general prompting techniques, coding prompts, and the grounding checklist with the verify-mode report. |
+| `skills/help/SKILL.md` | Help for using the plugin: the three ways to use it, how to turn on every-message mode, a quick setup check, and best practices. It runs only when you ask for it. |
 
 The plugin is only text. It has no hooks, scripts or server, so it runs the same on
 macOS, Linux and Windows with nothing to install.

@@ -15,6 +15,9 @@ on every message (see [Using it](using-it.md#where-it-runs)). It does two things
 ![The Claude desktop app: a one-line request, then Claude's rewritten prompt and an Assumptions line](images/desktop.png)
 *Real screenshot from the Claude desktop app's Code tab, October 17, 2026.*
 
+For quick help inside Claude, type `/prompt-sharpener:help`, or ask for "Prompt
+Sharpener help" in Cowork or Claude chat.
+
 ## Guides
 
 | Guide | Read it to |
@@ -26,7 +29,7 @@ on every message (see [Using it](using-it.md#where-it-runs)). It does two things
 | [Troubleshooting and FAQ](troubleshooting.md) | Fix common problems and get quick answers. |
 
 A printable [user manual](https://madewithdeezle.com/downloads/prompt-sharpener-manual.pdf)
-(a 15-page PDF with the same content and pictures) is on madewithdeezle.com.
+(a 16-page PDF with the same content and pictures) is on madewithdeezle.com.
 
 ## About the pictures
 

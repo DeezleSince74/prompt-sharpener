@@ -1,6 +1,6 @@
 # How it works
 
-The plugin is small: one skill and three reference guides. It has no hook, no scripts and
+The plugin is small: the main skill, three reference guides, and a help skill. It has no hook, no scripts and
 no server. Everything in it is text that Claude reads.
 
 ## The parts
@@ -8,6 +8,7 @@ no server. Everything in it is text that Claude reads.
 | Part | File | What it does |
 | --- | --- | --- |
 | The skill | `skills/prompt-sharpener/SKILL.md` | A skill is a set of instructions Claude loads when it needs them. This one holds the full method: when to rewrite, finding what you really want, when to ask instead of guess, rewrite techniques, and how to ground facts. |
+| Help | `skills/help/SKILL.md` | Help for using the plugin: the three ways to use it, how to turn on every-message mode, a quick setup check, and best practices. It runs only when you ask for it. Claude never starts it on its own, so it doesn't compete with the main skill. |
 | References | `skills/prompt-sharpener/references/` | Longer guides the skill reads when needed: `techniques.md` (prompting techniques), `coding-prompts.md` (coding prompts), and `grounding.md` (the fact-checking checklist and the verify report format). |
 
 ## How Claude decides to use it
