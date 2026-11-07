@@ -26,7 +26,7 @@ description asks to be used on every request, and lists what to do in order:
 Once the skill has loaded, it tells Claude to keep using it for the rest of the
 conversation.
 
-**Why it isn't guaranteed on every message.** Claude still makes the call. On a message
+**Why it isn't on every message by default.** Claude still makes the call. On a message
 that already looks complete, it may skip the skill. If you want it every time, add the
 one line in [Using it](using-it.md#every-message) to your standing instructions. That
 line sits in front of Claude on every message, so the skill always runs.

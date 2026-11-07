@@ -9,7 +9,7 @@
   do in priority order: stop when asked, hand back a better prompt, verify, full rewrite,
   one-line rewrite, or a normal reply. Once loaded, it keeps going for the rest of the
   conversation.
-- To have it run on every message for sure, add one line to your standing instructions
+- To have it run on every message, add one line to your standing instructions
   (`CLAUDE.md`, Cowork's global instructions, or your chat preferences). The README and
   guides show the line and where it goes.
 
