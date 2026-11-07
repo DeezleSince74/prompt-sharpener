@@ -1,27 +1,38 @@
 # Using it
 
-In Claude Code and Cowork you won't think about it, because it runs on every message. Two
-more ways to use it are one phrase away.
+Most of the time you won't think about it: Claude uses it on its own. Two more ways to use
+it are one phrase away.
 
 | Way | How to start it | What you get |
 | --- | --- | --- |
-| Every message | Nothing. It's automatic. | The rewrite, the Assumptions line, then the work. |
+| On its own | Nothing. Claude uses it when your message calls for it. | The rewrite, the Assumptions line, then the work. |
 | Improve a prompt | "Improve this prompt: …" or "Just rewrite it." | A better prompt and a short list of what changed and why. Claude stops there and doesn't run it. |
 | Verify a claim | "Verify this: …" or "Is this still current?" | A short report for each claim, with the source and the date it was checked. |
 
+## Where it runs
+
+It works the same way in Claude Code (terminal, IDE, desktop Code tab), Cowork, and
+Claude chat (web, desktop, mobile). Claude uses it on its own for most requests,
+including clear ones, and for the rest of the conversation once it has started. On a
+message that already looks complete, Claude may skip it. To be sure for one message,
+start with "Sharpen this first:".
+
 ## Every message
 
-### Where it runs
+To have it run on every message, add this line to your standing instructions:
 
-| App | When it rewrites |
+```
+Use the prompt-sharpener skill on every request: show my request rewritten as a clear prompt with one Assumptions line before doing the work, and quietly check outside facts against current sources.
+```
+
+| App | Where the line goes |
 | --- | --- |
-| Claude Code (terminal, IDE, desktop Code tab) | Every message |
-| Cowork | Every message |
-| Claude chat (web, desktop, mobile) | When a request looks short or vague, or when you ask |
+| Claude Code | Your `CLAUDE.md` file. `~/.claude/CLAUDE.md` covers every project, and a project's own `CLAUDE.md` covers just that one. |
+| Cowork | Settings → Cowork → Global instructions, in the Claude desktop app. |
+| Claude chat | Your personal preferences in Settings, or a project's instructions. |
 
-Claude chat doesn't run plugin hooks, and the hook is what makes it run on every message.
-In chat, Claude uses the skill when it thinks it fits. To be sure, start with "Sharpen this
-first:".
+To stop, delete the line. For one conversation, you can also just ask Claude to stop
+showing the rewrite.
 
 See [Getting started](getting-started.md#your-first-message) for what a normal reply
 looks like.
@@ -52,8 +63,8 @@ Developer's Guide on October 17, 2026.*
 
 ## Quiet fact-checking
 
-You don't have to ask for it. On every message, Claude checks outside facts before it
-states them. These count as outside facts:
+You don't have to ask for it. Whenever the skill is in use, Claude checks outside facts
+before it states them. These count as outside facts:
 
 - A version number, or "the latest version is …".
 - A command, a setup step, or a menu path in someone else's product.

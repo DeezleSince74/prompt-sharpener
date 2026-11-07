@@ -1,8 +1,8 @@
 # Prompt Sharpener
 
 A plugin for Claude Code, Cowork and Claude chat that does two things to your requests.
-In Claude Code and Cowork it runs on every message you send. In Claude chat it runs
-when your request looks short or vague, or when you ask it to (see [Where it runs](#where-it-runs)).
+Claude uses it on its own for most requests, and one line in your instructions makes it run
+on every message (see [Where it runs](#where-it-runs)).
 
 1. **It rewrites your request into a clear prompt, and shows you that first.** Before
    Claude starts any work, the reply opens with your request rewritten as a complete
@@ -63,14 +63,22 @@ Then the finished post follows.
 
 ## Where it runs
 
-| App | When it rewrites |
-| --- | --- |
-| Claude Code (terminal, IDE, desktop Code tab) | Every message |
-| Cowork | Every message |
-| Claude chat (web, desktop, mobile) | When a request looks short or vague, or when you ask: "sharpen this first" |
+It works the same way in Claude Code (terminal, IDE, desktop Code tab), Cowork, and Claude
+chat (web, desktop, mobile). Claude uses it on its own for most requests, and keeps using
+it for the rest of a conversation once it starts. On a message that already looks
+complete, Claude may skip it. To be sure for one message, start with "Sharpen this first:".
 
-Claude chat doesn't run plugin hooks, and the hook is what makes it run on every message.
-In chat, Claude uses the skill when it thinks it fits.
+**To run it on every message**, add this line to your standing instructions:
+
+```
+Use the prompt-sharpener skill on every request: show my request rewritten as a clear prompt with one Assumptions line before doing the work, and quietly check outside facts against current sources.
+```
+
+| App | Where the line goes |
+| --- | --- |
+| Claude Code | `~/.claude/CLAUDE.md` (every project) or a project's own `CLAUDE.md` |
+| Cowork | Settings → Cowork → Global instructions, in the Claude desktop app |
+| Claude chat | Your personal preferences in Settings, or a project's instructions |
 
 ## Installing
 
@@ -90,15 +98,11 @@ started with.
 
 | Part | What it does |
 | --- | --- |
-| `hooks/hooks.json` | Each time you submit a message (a `UserPromptSubmit` hook), prints `hooks/rules.txt` with `cat`. |
-| `hooks/rules.txt` | The two short directions above, as plain text. Nothing reads your input, files or network. |
-| `skills/prompt-sharpener/SKILL.md` | The full method: how to find what you really want, when to ask instead of guess, rewrite techniques, and how to ground facts quietly. |
+| `skills/prompt-sharpener/SKILL.md` | The full method: when to rewrite (an ordered list of cases), how to find what you really want, when to ask instead of guess, rewrite techniques, and how to ground facts quietly. |
 | `skills/prompt-sharpener/references/` | Longer guides: general prompting techniques, coding prompts, and the grounding checklist with the verify-mode report. |
-| `tests/test-hook.sh` | Checks the hook's output, with no model calls. |
 
-The hook works on macOS, Linux and Windows with nothing extra to install. Its one command,
-`cat`, reads the rules file in Bash and in Windows PowerShell alike, so Windows users
-don't need Git for Windows.
+The plugin is only text. It has no hooks, scripts or server, so it runs the same on
+macOS, Linux and Windows with nothing to install.
 
 Fact-checking uses whatever search or fetch tools your session has. With none, Claude
 still answers but marks the facts it couldn't check as unverified.

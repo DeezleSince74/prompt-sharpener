@@ -8,8 +8,8 @@
     {
       "name": "prompt-sharpener",
       "source": "./",
-      "description": "Rewrites every request into a clear prompt and shows it first; quietly checks outside facts and flags only the ones it couldn't confirm.",
-      "version": "1.0.2",
+      "description": "Rewrites your requests into clear prompts and shows each one first; quietly checks outside facts and flags only the ones it couldn't confirm.",
+      "version": "1.0.3",
       "license": "MIT"
     }
   ]

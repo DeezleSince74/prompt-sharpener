@@ -1,6 +1,6 @@
 ---
 name: prompt-sharpener
-description: "Rewrites a request into a clear, complete prompt, shows it first with one line of assumptions, then does the work; quietly checks outside facts (versions, prices, commands, limits, API shapes, rules) against current sources before stating them. Use on any request that is short, vague, or missing details such as audience, format, length or scope, even when the person does not ask for a better prompt. Also use when someone asks to improve, sharpen, enhance, rewrite, or fix a prompt; asks to verify a claim (\"verify this\", \"is this current\", \"check the docs\"); or when a standing rule calls for inline mode."
+description: "Use on every request, including ones that look clear, and keep applying it to every later message in the conversation. Rewrites the request into a clear, complete prompt, shows it first with one line of assumptions, then does the work; quietly checks outside facts (versions, prices, commands, limits, API shapes, rules) against current sources before stating them. Priority, first match wins: (1) asked to stop showing the rewrite: just do the work; (2) asked to improve, sharpen, rewrite or fix a prompt: return the better prompt and stop; (3) asked to verify a claim (\"verify this\", \"is this current\", \"check the docs\"): verify report; (4) short, vague, or missing audience, format, length or scope: full rewrite, then the work; (5) clear and specific: one \"Taking this as: ...\" line, then the work; (6) not a request (thanks, ok): reply normally."
 ---
 
 # Prompt Sharpener
@@ -49,9 +49,46 @@ when an inline rule is active.
 
 If this skill loaded on its own for an ordinary request, with no standing rule
 and no ask for the prompt itself, use inline mode: show the rewrite, then do
-the work. This is the usual case in Claude chat, where plugin hooks don't run,
-so the skill stands in for the hook. A one-line ask with a clear answer needs
+the work. That is the usual case: the plugin has no hook, so the skill loads
+because its description matched. A one-line ask with a clear answer needs
 only the one-line "Taking this as: ..." form.
+
+## Which mode to use: priority order
+
+Check these in order and use the first one that matches. They apply whether a
+standing rule loaded the skill or Claude loaded it on its own.
+
+1. **The person asked to stop showing the rewrite** in this conversation. Do
+   the work with no rewrite block. Grounding keeps running.
+2. **The person asked for the prompt itself** ("improve this prompt", "just
+   rewrite it", "give me a better prompt for…"). Standalone mode: the
+   sharpened prompt and the rationale, then stop.
+3. **The person asked to check facts** ("verify this", "is this still
+   current?", "check the docs on…"). Verify mode.
+4. **The request is short, vague, or missing details** such as audience,
+   format, length or scope. Inline mode with the full rewrite block and the
+   `Assumptions:` line, then the work.
+5. **The request is clear and specific.** Inline mode with the one-line
+   "Taking this as: ..." form, then the work.
+6. **The message isn't a request**: thanks, "ok", or an answer to a question
+   you asked. No rewrite; just reply.
+
+| Message | Rule | The reply opens with |
+| --- | --- | --- |
+| `stop showing the rewrite, then fix the typo in README` | 1 | The fix, with no rewrite |
+| `Improve this prompt: summarize this article` | 2 | A better prompt and what changed; then stop |
+| `verify this: Python 3.8 still gets security fixes` | 3 | A claim-by-claim report |
+| `write a blog post about dogs` | 4 | A rewrite block and an Assumptions line |
+| `rename utils.js to helpers.js` | 5 | "Taking this as: ..." |
+| `thanks, that worked` | 6 | Nothing extra |
+
+When two rules seem to fit, the lower number wins: an explicit ask from the
+person always beats your own read of the request.
+
+**Keep going for the rest of the conversation.** Once this skill has loaded,
+apply the order above to every later message in the same conversation, not
+only the one that loaded it, until the person asks you to stop. This is what
+lets the plugin run on every message without a hook.
 
 ## The workflow
 

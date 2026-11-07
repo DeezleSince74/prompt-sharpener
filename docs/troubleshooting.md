@@ -4,14 +4,12 @@
 
 ### I installed it, but replies don't start with a rewrite
 
-- In Claude chat (web, desktop or mobile), this is expected. Chat doesn't run plugin
-  hooks, so it rewrites only when a request looks vague or you ask. Start with
-  "Sharpen this first:" to be sure. Claude Code and Cowork run it on every message.
+- On a message that already looks complete, Claude may skip it. Start with "Sharpen
+  this first:" to be sure, or add the one line in
+  [Using it](using-it.md#every-message) to have it run on every message.
 - Start a new session. Running sessions keep the plugins they started with.
 - Run `/plugin` and check that Prompt Sharpener is enabled.
 - Check that you didn't ask Claude to stop the rewrite earlier in this conversation.
-- Make sure you're on version 1.0.2 or later (`claude plugin list` shows it). Version 1.0.0
-  needed Git for Windows to run the hook on Windows.
 
 ### I asked for a better prompt, and Claude ran it instead
 
@@ -36,7 +34,7 @@ you'll see two.
 ## FAQ
 
 **Does it slow Claude down?**
-The hook only prints a short block of fixed text, so it adds almost no time. The
+Barely. Loading the skill takes a moment the first time in a conversation. The
 rewrite adds a few lines to the start of each reply. Fact-checks take time only when a
 reply depends on an outside fact.
 
@@ -47,9 +45,9 @@ so the result matches the rewrite you can see.
 **Can I use it with my own `CLAUDE.md` rules?**
 Yes. The plugin never overrides what you or your organization tell Claude.
 
-**Does it work in the desktop app and editor extensions?**
-It works anywhere Claude Code runs plugins: the terminal, the desktop app's Code tab,
-and the editor extensions.
+**Does it work in the desktop app, Cowork and editor extensions?**
+Yes. It's a skill, so it works anywhere Claude runs plugin skills: Claude Code (the
+terminal, the desktop app's Code tab and the editor extensions), Cowork, and Claude chat.
 
 **Where do I report a bug?**
 Open an issue at

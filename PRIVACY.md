@@ -2,8 +2,9 @@
 
 Prompt Sharpener does not collect, store or send any personal data.
 
-- The hook prints the same fixed text on every message. It does not read your message,
-  your files, or anything else on your computer, and it makes no network requests.
+- The plugin is only text: a skill that tells Claude how to rewrite prompts and check
+  facts. It runs no commands or scripts, reads nothing on your computer on its own, and
+  makes no network requests.
 - The plugin has no server, no analytics and no telemetry.
 - When Claude checks a fact, it uses the search or fetch tools already in your session,
   under your session's own permissions. The plugin adds no tools of its own.

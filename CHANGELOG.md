@@ -1,5 +1,18 @@
 # Changelog
 
+## 1.0.3 — 2026-11-06
+
+- No more hook. The plugin Directory now accepts hooks and scripts only from verified
+  organizations, so the plugin is now one skill and its guides, with nothing that runs
+  commands. The hook, `hooks/rules.txt` and `tests/test-hook.sh` are gone.
+- The skill's description now asks Claude to use it on every request and lists what to
+  do in priority order: stop when asked, hand back a better prompt, verify, full rewrite,
+  one-line rewrite, or a normal reply. Once loaded, it keeps going for the rest of the
+  conversation.
+- To have it run on every message for sure, add one line to your standing instructions
+  (`CLAUDE.md`, Cowork's global instructions, or your chat preferences). The README and
+  guides show the line and where it goes.
+
 ## 1.0.2 — 2026-10-24
 
 - Works better in Claude chat, which doesn't run plugin hooks. The skill now loads for any
